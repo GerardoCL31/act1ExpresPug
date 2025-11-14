@@ -1,0 +1,25 @@
+extends layout 
+block content 
+    h1 New Character
+
+    form(action='/new', method='POST')
+        div 
+            Label(for="id") ID:
+            input(type="number" name="id" required)
+        div
+            Label(for="name") Name:
+            input(type="text" name="name" required)
+        div
+            Label(for="job") Job:
+            input(type="text" name="job" required)
+        div
+            Label(for="level") Level:
+            input(type="number" name="level" required)
+        div
+            label(for="weapon") Weapon:
+            input(type="text" name="weapon" required)
+        div
+            button(type="submit") Save 
+        p 
+            a(href='/list') Back
+            
